@@ -1,1 +1,8 @@
-<h1>{{ 'Server' }} with ID: {{ serverID }} is {{ getServerStatus() }}</h1>
+<!-- <h1>{{ 'Server' }} with ID: {{ serverID }} is {{ getServerStatus() }}</h1> -->
+
+<h1 style="text-align: center; color: cornflowerblue;">Practice</h1>
+
+<input type="text" class="form-controler" [(ngModel)]="userName" (input)="check($event)">
+<p>{{ userName }}</p>
+<br>
+<button class="btn btn-primary" [disabled]="isEmpty" (click)="onClean()">Delete User Name</button>

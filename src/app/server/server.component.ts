@@ -10,10 +10,17 @@ import { Component } from '@angular/core';
     `]
 })
 export class serverComponent {
-    serverID: number = 7;
-    serverStatus: String = "Online";
+    userName: String;
+    isEmpty: boolean = true;
 
-    getServerStatus() {
-        return this.serverStatus;
+    onClean() {
+        this.userName = "";
+        this.isEmpty = true;
+    }
+
+    check(event: Event) {
+        if ((<HTMLInputElement>event.target).value != "") {
+            this.isEmpty = false;
+        }
     }
 }
