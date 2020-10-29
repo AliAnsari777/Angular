@@ -2,7 +2,8 @@
 
 <h1 style="text-align: center; color: cornflowerblue;">Practice</h1>
 
-<input type="text" class="form-controler" [(ngModel)]="userName" (input)="check($event)">
+<label for="userName">User Name</label><br>
+<input type="text" class="form-controler" [(ngModel)]="userName">
 <p>{{ userName }}</p>
 <br>
-<button class="btn btn-primary" [disabled]="isEmpty" (click)="onClean()">Delete User Name</button>
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="userName = ''">Delete User Name</button>

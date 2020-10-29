@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer: boolean;
   createNewServer: String = "Server is not created";
-  serverName: String = 'initial text';
+  serverName: String = 'server';
+  serverCreated: boolean = false;
 
   constructor() {
     this.allowNewServer = false;
@@ -22,6 +23,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+    this.serverCreated = true;
     this.createNewServer = "New Server Created! its name is: " + this.serverName;
   }
 
