@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./success-alert.component.css']
 })
 export class SuccessAlertComponent implements OnInit {
+  status: string;
+  alerts = ['online', 'offline'];
 
-  constructor() { }
+  constructor() {
+    this.status = Math.random() > 0.5 ? "online" : "offline";
+  }
 
   ngOnInit(): void {
   }
 
+  getColor() {
+    return this.status === "online" ? "green" : "red";
+  }
+
+  onAddServer() {
+    this.alerts.push("online");
+  }
 }

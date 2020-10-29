@@ -3,3 +3,7 @@ p{
     border: 1px solid green;
     background-color: lightgreen;
 }
+
+.offline{
+    background-color: lightcoral;
+}

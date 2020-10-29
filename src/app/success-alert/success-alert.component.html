@@ -1,1 +1,7 @@
-<p>your process successfuly done.</p>
+<button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+
+<p [ngStyle]="{color: getColor()}" [ngClass]="{offline: status === 'offline'}">
+    your process successfuly done.
+</p>
+
+<app-warning-alert *ngFor="let var of alerts"></app-warning-alert>

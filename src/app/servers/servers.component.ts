@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   createNewServer: String = "Server is not created";
   serverName: String = 'server';
   serverCreated: boolean = false;
+  test = ['one', 'two'];
 
   constructor() {
     this.allowNewServer = false;

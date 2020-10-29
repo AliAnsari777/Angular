@@ -10,5 +10,6 @@
 <ng-template #noServer>
     <p>server is not created!</p>
 </ng-template>
+
 <p>New servers component that contains follwoing component!</p>
-<app-server></app-server>
+<app-server *ngFor="let val of test"></app-server>

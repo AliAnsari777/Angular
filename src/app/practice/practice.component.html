@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="onTogle()">Display Detail</button>
+<br><br>
+<p [ngStyle]="{visibility: getVisibility() }">This is second assignmennt</p>
+<br><br>
+<p *ngFor="let value of log; let i = index" [ngClass]="{log: i > 5}"
+    [ngStyle]="{backgroundColor: i > 5 ? 'lightseagreen' : ''}">{{ value }}</p>
